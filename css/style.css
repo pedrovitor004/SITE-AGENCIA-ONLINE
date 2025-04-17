@@ -17,7 +17,7 @@ body, html {
 /* Fundo com imagem e desfoque */
 .background {
   position: relative;
-  background: url('/images/image01.jpg') no-repeat center center;
+  background: url('image01.jpg') no-repeat center center;
   background-size: cover;
   min-height: 100vh;
   display: flex;
