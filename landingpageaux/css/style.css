@@ -1,0 +1,170 @@
+/* Configurações gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, html {
+  height: 100%;
+  font-family: "Darker Grotesque", sans-serif;
+}
+
+/* Fundo com imagem e desfoque */
+.background {
+  position: relative;
+  background: url('/images/image01.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(2px);
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.left {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 1s ease-out;
+}
+
+.logo {
+  width: 70px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+h1 strong {
+  display: block;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+h1 span {
+  color: #69AACC;
+  font-weight: 500;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #e3f2fd;
+  margin-bottom: 30px;
+  max-width: 90%;
+}
+
+/* Botões */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: linear-gradient(270deg, #1e40af, #60a5fa);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: solid 1px white;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-self: flex-start;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.cta-button .icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagem com animação */
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lamp {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
